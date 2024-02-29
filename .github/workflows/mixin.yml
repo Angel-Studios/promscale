@@ -16,7 +16,7 @@ defaults:
 
 jobs:
   check-mixin:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, amd-runners]
     name: Check monitoring mixin
     steps:
     - uses: actions/checkout@v3

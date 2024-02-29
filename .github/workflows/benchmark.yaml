@@ -13,7 +13,7 @@ env:
 jobs:
   benchmark:
     if: contains( github.event.pull_request.labels.*.name, 'action:benchmarks')
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, amd-runners]
     steps:
       - name: Checkout current branch
         uses: actions/checkout@v3

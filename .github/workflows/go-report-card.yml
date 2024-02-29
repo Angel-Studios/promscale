@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, amd-runners]
     steps:
       - name: Request Report Update
         run: |

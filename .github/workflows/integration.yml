@@ -15,7 +15,7 @@ env:
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, amd-runners]
     strategy:
       matrix:
         pg:
@@ -55,7 +55,7 @@ jobs:
     if: always()
     needs:
       - run
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, amd-runners]
     steps:
       - name: Mark the job as a success
         if: needs.run.result == 'success'
